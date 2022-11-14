@@ -5,7 +5,13 @@ function App() {
     <div className="App flex items-center justify-center lg:flex-row flex-col">
       <HeroSection
         title="Welcome Again!"
-        subtitle="Access your account with your e-mail and password!"
+        subtitle={
+          <a href="#login-section">
+            <span className="lg:hidden">Click here to a</span>
+            <span className="hidden lg:inline">A</span>ccess your account with
+            e-mail and password!
+          </a>
+        }
         buttontext="Register Here!"
         onClick={''}
       />
