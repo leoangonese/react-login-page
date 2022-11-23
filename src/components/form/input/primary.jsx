@@ -11,7 +11,7 @@ const PrimaryInput = ({ type, label, placeholder, value, onChange, error, textEr
             </label>
             {visibility !== null ? (
                 <div className="w-full flex justify-end text-blue-500 text-lg sm:text-xl lg:text-2xl xl:text-3xl">
-                    <FontAwesomeIcon className="absolute pt-5 pr-4 lg:pr-8 md:pt-6 lg:pt-10 xl:pt-9" icon={visibility === true ? faEyeSlash : faEye} onClick={setVisibility} />
+                    <FontAwesomeIcon className="absolute pt-5 pr-4 lg:pr-8 md:pt-6 lg:pt-10 xl:pt-9 cursor-pointer" icon={visibility === true ? faEyeSlash : faEye} onClick={setVisibility} />
                 </div>
             ) : ''}
             <input onFocusCapture={() => setShadow(true)} type={type} className={`${error} my-2 md:my-3 lg:my-5 text-black w-full rounded-full shadow-2xl p-2 md:p-3 lg:p-5 pl-5`} placeholder={placeholder} value={value} onChange={(event) => onChange(event.target.value)} />

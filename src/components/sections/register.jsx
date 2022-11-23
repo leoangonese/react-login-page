@@ -2,21 +2,7 @@ import { useState } from "react"
 import PrimaryInput from "../form/input/primary"
 import PrimaryButton from "../form/button/primary"
 
-const RegisterPage = ({ setStep }) => {
-    const [username, setUsername] = useState('')
-    const [usernameError, setUsernameError] = useState(false)
-
-    const [email, setEmail] = useState('')
-    const [emailError, setEmailError] = useState(false)
-
-    const [password, setPassword] = useState('')
-    const [passwordError, setPasswordError] = useState(false)
-    const [passwordType, setPasswordType] = useState()
-
-    const [passwordRepeat, setPasswordRepeat] = useState('')
-    const [passwordErrorRepeat, setPasswordErrorRepeat] = useState(false)
-    const [passwordTypeRepeat, setPasswordTypeRepeat] = useState()
-
+const RegisterPage = ({ setStep, username, setUsername, usernameError, setUsernameError, email, setEmail, emailError, setEmailError, password, setPassword, passwordError, setPasswordError, passwordType, setPasswordType, passwordRepeat, setPasswordRepeat, passwordErrorRepeat, setPasswordErrorRepeat, passwordTypeRepeat, setPasswordTypeRepeat }) => {
     return (
         <div className="w-full min-h-screen bg-blue-500 flex flex-col items-center justify-center text-white pt-14">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-black my-10 sm:my-12 md:my-14 lg:my-16 2xl:my-20 animate-bounce ">Create your Account</h1>

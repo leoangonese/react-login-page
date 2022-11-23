@@ -5,7 +5,6 @@ import LoginSection from './components/sections/login'
 import RegisterPage from './components/sections/register'
 function App() {
   const [step, setStep] = useState('Login')
-  console.log(step)
   //Login
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -16,6 +15,20 @@ function App() {
   const [passwordError, setPasswordError] = useState(false)
 
   //Create account
+
+  const [usernameCreate, setUsernameCreate] = useState('')
+  const [usernameErrorCreate, setUsernameErrorCreate] = useState(false)
+
+  const [emailCreate, setEmailCreate] = useState('')
+  const [emailErrorCreate, setEmailErrorCreate] = useState(false)
+
+  const [passwordCreate, setPasswordCreate] = useState('')
+  const [passwordErrorCreate, setPasswordErrorCreate] = useState(false)
+  const [passwordTypeCreate, setPasswordTypeCreate] = useState()
+
+  const [passwordRepeat, setPasswordRepeat] = useState('')
+  const [passwordErrorRepeat, setPasswordErrorRepeat] = useState(false)
+  const [passwordTypeRepeat, setPasswordTypeRepeat] = useState()
 
   return (
     <>
@@ -49,7 +62,31 @@ function App() {
           />
         </div>
       )}
-      {step === 'Register' && <RegisterPage setStep={setStep} />}
+      {step === 'Register' && (
+        <RegisterPage
+          setStep={setStep}
+          username={usernameCreate}
+          setUsername={setUsernameCreate}
+          usernameError={usernameErrorCreate}
+          setUsernameError={setUsernameErrorCreate}
+          email={emailCreate}
+          setEmail={setEmailCreate}
+          emailError={emailErrorCreate}
+          setEmailError={setEmailErrorCreate}
+          password={passwordCreate}
+          setPassword={setPasswordCreate}
+          passwordError={passwordErrorCreate}
+          setPasswordError={setPasswordErrorCreate}
+          passwordType={passwordTypeCreate}
+          setPasswordType={setPasswordTypeCreate}
+          passwordRepeat={passwordRepeat}
+          setPasswordRepeat={setPasswordRepeat}
+          passwordErrorRepeat={passwordErrorRepeat}
+          setPasswordErrorRepeat={setPasswordErrorRepeat}
+          passwordTypeRepeat={passwordTypeRepeat}
+          setPasswordTypeRepeat={setPasswordTypeRepeat}
+        />
+      )}
     </>
   )
 }
